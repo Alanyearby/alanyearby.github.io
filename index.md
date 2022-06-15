@@ -32,17 +32,45 @@ I believe I met the course objectives through my implementation plan associated 
 
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/76213355/173709216-ff0127c2-824d-412e-8a92-196ad7094896.png">
 
+Implementing ‘Mongodb’ on a Mac operating system, I went about retrieving an extensive .json detailing movies with the intention of providing detailed query’s and security protection for the database created for the collection. In the image above I went about essentially loading the .json file into my Mongodb client with the following ‘mongoimport’ commands:
+
+```mongoimport –jsonArray –db movie –collection movielist –file /Users/alanyearby/Desktop/MongoPractice/Movies.json
+```
+
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/76213355/173709245-f1b465fa-4746-44d2-b55e-0ec97fd23ede.png">
+
+Confirmation of the database and use of the database to include the subsequent collection took place with the following commands:
+```show dbs
+use movie
+show collection
+```
 
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/76213355/173709272-c9135891-fb6a-46cc-9f3d-d9b8eb97fbf5.png">
 
+The image above depicts the confirmation of the data in the collection ‘movielist’ through the following command:
+```db.movielist.find().pretty()```
+
+
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/76213355/173709293-a363e7b6-2104-41b1-a1cb-a656c36a26f5.png">
+
+The above image shows the inclusion of an additional database with a more detailed information to query. 
 
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/76213355/173709314-5726735e-24cb-4f7d-bcaa-f4abf58bc8f5.png">
 
+The image above shows the detailed query command in ‘mongodb’ to find specific information using the following command:
+```db.movieRating.find({“genres”: “Action”: “Keanu Reeves”}).pretty()```
+
+
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/76213355/173709338-7bb307b9-859d-4dda-b8d4-ba06d0e76f38.png">
 
+The image above depicts further useful querying for specific information, in this case movie ratings higher/greater than 8.0 through the following command:
+```db.movieRating.find({“imdbRating”: {$gt: 8.0}}).pretty()```
+
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/76213355/173709346-3b511164-591d-448e-9b80-aad497ab01f1.png">
+
+Finally, the image above shows the inclusion of security measures to give a user authorization via the following command:
+```db.createUser({user: “alanyearby”,pwd: passwordPrompt(),roles:[{role: “readWrite”, db: “movies”}]})```
+
 
 
 You can use the [editor on GitHub](https://github.com/Alanyearby/alanyearby.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
