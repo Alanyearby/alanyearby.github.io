@@ -9,7 +9,7 @@ and security. I have experienced and excelled in many facets that computer scien
 
 
 # Code review 
-As a starting point, I went about a code review over my enhancement plans amd what I though was lacking. Three past assignments in three categories were to be enhanced, those categories being: Software engineering and design, Algorithms and data structure, and Databases.
+As a starting point, I went about a code review over my enhancement plans and what I though was lacking. Three past assignments in three categories were to be enhanced, those categories being: Software engineering and design, Algorithms and data structure, and Databases.
 
 https://user-images.githubusercontent.com/76213355/173702147-061a9093-486a-4224-8405-9ffb38c4d632.mp4
 
